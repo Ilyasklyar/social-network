@@ -1,0 +1,18 @@
+.nav {
+    grid-area: n;
+    padding: 15px;
+    background: #fff;
+  }
+
+  .item a {
+      color: rgb(12, 122, 248);
+      text-decoration: none;
+      margin-bottom: 10px;
+      display: block;
+  }
+  .item a:hover {
+    color:#6bc3f7;
+  }
+  .item a.activeLink {
+    color: gold;
+}

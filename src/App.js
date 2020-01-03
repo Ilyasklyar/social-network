@@ -9,6 +9,7 @@ import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 import { Route } from 'react-router-dom';
 import UsersContainer from './components/Users/UsersContainer';
+import Login from './Login/Login';
 
 const App = (props) => {
   return (
@@ -29,6 +30,7 @@ const App = (props) => {
         <Route path='/profile/:userId?' render={() =>
           <ProfileContainer store={props.store} />} />
         <Route path='/users' render={() => <UsersContainer />} />
+        <Route path='/login' render={() => <Login />} />
       </div>
     </div>
   );

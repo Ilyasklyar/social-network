@@ -3,6 +3,7 @@ import s from './Dialogs.module.css';
 import Message from './Message/Message';
 import DialogItem from './DialogItem/DialogItem';
 import { Field, reduxForm } from 'redux-form';
+import AddMessageForm from './AddMessageForm';
 
 
 const Dialogs = (props) => {
@@ -24,20 +25,10 @@ const Dialogs = (props) => {
             <div className={s.messages}>
                 {massagesData}
             </div>
-            <AddMessageFormRedux onSubmit={addNewMessage} />
+            <AddMessageForm onSubmit={addNewMessage} />
         </div>
     );
 }
 
-const AddMessageForm = (props) => {
-    return <form onSubmit={props.handleSubmit}>
-        <div>
-            <Field component='textarea' name='newMessageBody' placeholder='Enter message' />
-        </div>
-        <button>Send</button>
-    </form>
-}
-
-const AddMessageFormRedux = reduxForm({ form: 'dialogAddMessageForm' })(AddMessageForm);
 
 export default Dialogs;

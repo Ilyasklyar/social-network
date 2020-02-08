@@ -8,7 +8,8 @@ const Header = (props) => {
       <img src="https://medien-bildung.ch/wp-content/uploads/2015/06/logo-256-transp.png" />
 
       <div className={s.loginBlock}>
-        {props.isAuth ? props.login :
+        {props.isAuth ? 
+        <div>{props.login} - <button onClick={props.logout}>Log out</button></div> :
           <NavLink to={'/login'}>
             login
         </NavLink>
